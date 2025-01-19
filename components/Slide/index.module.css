@@ -1,0 +1,19 @@
+.slide {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 64px;
+    background: var(--white);
+    color: var(--black);
+    position: relative;
+    overflow: hidden;
+}
+
+.slideRed {
+    background: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
