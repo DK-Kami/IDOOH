@@ -41,4 +41,5 @@ e
 next-env.d.ts
 
 # IDE
-/.idea
+/.idea/
+/.idea/jsLinters/
