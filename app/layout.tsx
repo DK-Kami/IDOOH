@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+
 import { satoshiFont } from "@/shared/theme";
+
 import "./globals.css";
 
 export const metadata: Metadata = {

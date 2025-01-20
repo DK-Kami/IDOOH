@@ -1,4 +1,5 @@
 import HeroSlide from "@/components/HeroSlide";
+
 import heroMain from "../public/images/hero-main.jpg";
 
 export default function HomePage() {

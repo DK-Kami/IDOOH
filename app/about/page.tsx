@@ -1,7 +1,8 @@
 import React from "react";
+
 import HeroSlide from "@/components/HeroSlide";
-import heroAbout from "@/public/images/hero-about.jpg";
 import Slide from "@/components/Slide";
+import heroAbout from "@/public/images/hero-about.jpg";
 import { footerHeader } from "@/shared/theme";
 
 const AboutPage = () => {

@@ -1,8 +1,10 @@
 import React, { FC } from "react";
-import classes from "./index.module.css";
-import { landingHeader, landingSubHeader } from "@/shared/theme";
 import Image from "next/image";
+
 import logo from "@/public/logo.svg";
+import { landingHeader, landingSubHeader } from "@/shared/theme";
+
+import classes from "./index.module.css";
 
 interface IHeroSlide {
   header: string;

@@ -1,8 +1,9 @@
 import React from "react";
+
 import HeroSlide from "@/components/HeroSlide";
-import heroClients from "@/public/images/hero-clients.jpg";
-import greyLogo from "@/public/grey-logo.svg";
 import Slide from "@/components/Slide";
+import greyLogo from "@/public/grey-logo.svg";
+import heroClients from "@/public/images/hero-clients.jpg";
 import { footerHeader } from "@/shared/theme";
 
 const ClientsPage = () => {

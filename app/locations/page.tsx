@@ -1,4 +1,5 @@
 import React from "react";
+
 import HeroSlide from "@/components/HeroSlide";
 import heroLocations from "@/public/images/hero-locations.jpg";
 
