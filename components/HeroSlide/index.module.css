@@ -1,27 +1,27 @@
 .hero {
-    height: 100vh;
-    width: 100vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 64px;
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 64px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .heroHeader {
-    position: absolute;
-    left: 64px;
-    top: 55px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  position: absolute;
+  left: 64px;
+  top: 55px;
+  width: calc(100% - 128px);
+  display: flex;
+  justify-content: space-between;
 }
 
 .heroTitle {
-    display: flex;
-    flex-direction: column;
-    gap: 66px;
+  display: flex;
+  flex-direction: column;
+  gap: 66px;
 }

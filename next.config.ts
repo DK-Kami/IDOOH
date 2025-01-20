@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: false,
-  basePath: "/idooh",
+  // basePath: "/idooh",
   output: "export",
   swcMinify: true,
   eslint: {
