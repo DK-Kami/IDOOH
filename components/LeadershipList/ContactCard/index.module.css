@@ -1,0 +1,25 @@
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 20%;
+}
+
+.contactPhoto {
+  height: 540px;
+  background: var(--primary);
+  color: var(--white);
+  padding: 40px 50px;
+  font-size: 28px;
+  font-weight: 500;
+  background-size: cover;
+  background-position: center center;
+}
+
+.contactName {
+  font-size: 32px;
+  font-weight: 600;
+}
+.contactTitle {
+  font-size: 32px;
+}

@@ -1,0 +1,43 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.aboutBody {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutText {
+  font-size: 70px;
+  line-height: 100px;
+  font-weight: 500;
+  width: 60%;
+}
+
+.aboutFooter {
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: auto;
+  text-align: center;
+}
+
+.leadershipContainer {
+  padding: 140px 65px;
+}
+.leadershipTitle {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 100px;
+  margin-bottom: 30px;
+}
+.leadershipText {
+  font-weight: 500;
+  font-size: 28px;
+  margin-bottom: 25px;
+  width: 50%;
+}
+
+.leadershipList {
+  margin-top: 75px;
+}
