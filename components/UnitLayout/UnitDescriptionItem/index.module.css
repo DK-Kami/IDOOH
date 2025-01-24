@@ -1,0 +1,24 @@
+.descriptionItem {
+  display: flex;
+  gap: 26px;
+}
+
+.descriptionItemImageWrapper {
+  width: 40px;
+}
+
+.descriptionItemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.descriptionItemTitle {
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.descriptionItemValue {
+  font-size: 28px;
+  font-weight: 500;
+}

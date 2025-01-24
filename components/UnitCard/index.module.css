@@ -1,0 +1,16 @@
+.creativeCard {
+  width: calc(50% - 33px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-weight: 600;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.creativeCardImage {
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}

@@ -1,0 +1,56 @@
+.unitPageHero {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.unitPageHeroTitle {
+  position: absolute;
+  left: 64px;
+  bottom: 55px;
+  font-size: 128px;
+  line-height: 120px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.unitDescriptionList {
+  padding: 100px 64px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.unitGallery {
+  margin-bottom: 64px;
+  padding: 0 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.unitPhoto {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.unitMapContainer {
+  padding: 0 64px 64px 64px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 50px;
+}
+
+.unitMapTitle {
+  color: var(--primary);
+  font-size: 160px;
+  font-weight: 600;
+  line-height: 150px;
+}

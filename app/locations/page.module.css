@@ -1,0 +1,18 @@
+.creativeList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px 65px;
+  padding: 64px;
+}
+
+.creativeCardEmpty {
+  height: 400px;
+  width: calc(50% - 33px);
+  background: var(--primary);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
