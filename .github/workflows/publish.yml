@@ -32,12 +32,10 @@ jobs:
       - name: Build with Next.js 🏗️
         run: npx next build
 
-      - name: Upload Artifact 📡
-        uses: actions/upload-artifact@master
+      - name: Upload artifact 📡
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: page
-          path: build
-          if-no-files-found: error
+          path: ./out
 
   deploy:
     environment:
@@ -48,17 +46,6 @@ jobs:
     needs: build
 
     steps:
-      - name: Download Artifact 📡
-        uses: actions/download-artifact@master
-        with:
-          name: page
-          path: .
-
-      - name: Upload artifact 📡
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
-
       - name: Publish to GitHub Pages 🚀
         id: deployment
         uses: actions/deploy-pages@v4

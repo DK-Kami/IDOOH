@@ -11,10 +11,10 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
 
-  a {
-    font-size: 70px;
-    font-weight: 600;
-    color: var(--white);
-  }
+.mainMenu a {
+  font-size: 70px;
+  font-weight: 600;
+  color: var(--white);
 }
