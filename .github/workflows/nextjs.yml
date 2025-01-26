@@ -9,6 +9,18 @@ on:
   push:
     branches: ["master"]
 
+  workflow_call:
+    inputs:
+      environment:
+        type: string
+        required: true
+
+    secrets:
+      NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN:
+        required: true
+      NEXT_PUBLIC_MAPBOX_STYLE_TOKEN:
+        required: true
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
