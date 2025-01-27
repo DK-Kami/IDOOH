@@ -1,13 +1,13 @@
 import React from "react";
 
-import Slide from "@/components/Slide";
+import HeroSlide from "@/components/HeroSlide";
 
 import classes from "./page.module.css";
 
 const ContactsPage = () => {
   return (
     <div>
-      <Slide isRedSlide>
+      <HeroSlide withoutLogo>
         <div className={classes.contactsContainer}>
           <div className={classes.contactsTitle}>Contacts</div>
 
@@ -31,7 +31,7 @@ const ContactsPage = () => {
             © Copyright 2024 IDOOH LLC. All rights reserved.
           </div>
         </div>
-      </Slide>
+      </HeroSlide>
     </div>
   );
 };

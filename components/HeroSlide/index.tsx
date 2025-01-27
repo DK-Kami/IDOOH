@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useEffect } from "react";
+import React, { FC, PropsWithChildren, useEffect } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
@@ -12,13 +12,20 @@ import MainMenu from "./MainMenu";
 import "./hamburger.css";
 import classes from "./index.module.css";
 
-interface IHeroSlide {
-  header: string;
+interface IHeroSlide extends PropsWithChildren {
+  header?: string;
   subHeader?: string;
-  url: string;
+  url?: string;
+  withoutLogo?: boolean;
 }
 
-const HeroSlide: FC<IHeroSlide> = ({ header, subHeader, url }) => {
+const HeroSlide: FC<IHeroSlide> = ({
+  header,
+  subHeader,
+  url,
+  children,
+  withoutLogo,
+}) => {
   const [isMenuOpen, setMenuOpen] = React.useState(true);
 
   const pathname = usePathname();
@@ -32,7 +39,7 @@ const HeroSlide: FC<IHeroSlide> = ({ header, subHeader, url }) => {
       {isMenuOpen && <MainMenu />}
 
       <div className={classes.heroHeader}>
-        <Image src={logo} alt="" />
+        {withoutLogo ? <div /> : <Image src={logo} alt="" />}
 
         <svg
           id="hamburger"
@@ -52,6 +59,7 @@ const HeroSlide: FC<IHeroSlide> = ({ header, subHeader, url }) => {
         <div style={landingHeader}>{header}</div>
         {subHeader && <div style={landingSubHeader}>{subHeader}</div>}
       </div>
+      {children}
     </div>
   );
 };

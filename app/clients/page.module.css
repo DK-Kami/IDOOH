@@ -1,0 +1,13 @@
+.clientsList {
+  margin: 122px 236px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.clientCard {
+  background-repeat: space;
+  width: 150px;
+  height: 104px;
+}
