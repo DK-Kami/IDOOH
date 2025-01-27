@@ -40,6 +40,11 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+
+    env:
+      NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN: ${{ secrets.MAPBOX_ACCESS_TOKEN }}
+      NEXT_PUBLIC_MAPBOX_STYLE_TOKEN: ${{ secrets.MAPBOX_STYLE_TOKEN }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
