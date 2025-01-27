@@ -6,7 +6,7 @@
   background-size: cover;
   padding: 64px;
   color: var(--white);
-  background: var(--primary);
+  background-color: var(--primary);
   display: flex;
   align-items: center;
   position: relative;
