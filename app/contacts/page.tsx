@@ -2,29 +2,33 @@ import React from "react";
 
 import Slide from "@/components/Slide";
 
+import classes from "./page.module.css";
+
 const ContactsPage = () => {
   return (
     <div>
-      <Slide></Slide>
-
       <Slide isRedSlide>
-        <div>
-          <div>Contacts</div>
+        <div className={classes.contactsContainer}>
+          <div className={classes.contactsTitle}>Contacts</div>
 
-          <div>
-            <div>Office</div>
-            <div>
+          <div className={classes.contactsItem}>
+            <div className={classes.contactsItemTitle}>Office</div>
+            <div className={classes.contactsItemValue}>
               1301-0165, floor 13, The One Tower, Sheik Zayed Road, Barsha
               Heights, TECOM, Dubai, UAE
             </div>
           </div>
-          <div>
-            <div>Email</div>
-            <div>faldina@idooh.ae</div>
+          <div className={classes.contactsItem}>
+            <div className={classes.contactsItemTitle}>Email</div>
+            <div className={classes.contactsItemValue}>faldina@idooh.ae</div>
           </div>
-          <div>
-            <div>Phone</div>
-            <div>+ 971 581 733 443</div>
+          <div className={classes.contactsItem}>
+            <div className={classes.contactsItemTitle}>Phone</div>
+            <div className={classes.contactsItemValue}>+ 971 581 733 443</div>
+          </div>
+
+          <div className={classes.contactsFooter}>
+            © Copyright 2024 IDOOH LLC. All rights reserved.
           </div>
         </div>
       </Slide>

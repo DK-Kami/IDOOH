@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import WhatsAppBadge from "@/components/WhatsAppBadge";
 import { satoshiFont } from "@/shared/theme";
 
 import "./globals.css";
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${satoshiFont.className}`}>{children}</body>
+      <body className={`${satoshiFont.className}`}>
+        {children}
+        <WhatsAppBadge />
+      </body>
     </html>
   );
 }

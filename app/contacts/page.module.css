@@ -1,0 +1,32 @@
+.contactsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-left: 30%;
+}
+
+.contactsTitle {
+  font-weight: 500;
+  font-size: 70px;
+}
+
+.contactsItem {
+  font-size: 28px;
+  display: flex;
+}
+
+.contactsItemTitle {
+  width: 150px;
+}
+
+.contactsItemValue {
+  max-width: 50%;
+}
+
+.contactsFooter {
+  margin-top: 60px;
+  font-weight: 500;
+  font-size: 28px;
+  opacity: 0.5;
+}
+
