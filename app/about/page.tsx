@@ -44,7 +44,7 @@ const AboutPage = () => {
           advertising across Europe and the MENA region, our team is dedicated
           to delivering exceptional results by creating advertising solutions
           with proven effectiveness. We leverage our accumulated expertise to
-          develop strategic approache for building effective advertising
+          develop strategic approach for building effective advertising
           networks.
         </div>
         <div className={classes.leadershipText}>
