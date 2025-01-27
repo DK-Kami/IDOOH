@@ -42,11 +42,11 @@ const LocationsPage = () => {
             creativePhotoUrl={(creative.photos as string[])[0]}
           />
         ))}
-        {new Array(3).fill(0).map((_, i) => (
-          <div className={classes.creativeCardEmpty} key={`creative-${i}`}>
-            COMING SOON
-          </div>
-        ))}
+        {/*{new Array(3).fill(0).map((_, i) => (*/}
+        {/*  <div className={classes.creativeCardEmpty} key={`creative-${i}`}>*/}
+        {/*    COMING SOON*/}
+        {/*  </div>*/}
+        {/*))}*/}
       </div>
     </div>
   );

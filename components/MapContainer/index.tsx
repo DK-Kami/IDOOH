@@ -14,9 +14,9 @@ interface IMapContainer extends PropsWithChildren {
 }
 
 const defaultMapOptions = {
-  zoom: 11,
-  longitude: 55.3567958,
-  latitude: 25.1984011,
+  zoom: 10,
+  longitude: 55.2678473,
+  latitude: 25.0878632,
 };
 
 const MapContainer: FC<IMapContainer> = ({ markers }) => {
