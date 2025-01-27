@@ -23,12 +23,8 @@ const MapContainer: FC<IMapContainer> = ({ markers }) => {
   const mapboxApiToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN ?? "";
   const mapboxStyleToken = process.env.NEXT_PUBLIC_MAPBOX_STYLE_TOKEN ?? "";
 
-  console.log("mapboxApiToken: ", mapboxApiToken);
-  console.log("mapboxStyleToken: ", mapboxStyleToken);
-
   const handleOnLoad = (e: MapEvent) => {
     e.target.loadImage(markerDropImage.src, (error, image) => {
-      console.log(markerDropImage.src, error, image);
       if (error || !image) throw error;
       e.target.addImage("drop-marker", image);
     });

@@ -17,7 +17,6 @@ const UnitCard: FC<IUnitCard> = ({
   const router = useRouter();
 
   const goToUnit = () => {
-    console.log(router);
     if (!router) return;
     router.push(`/locations/${creativeId}`);
   };
