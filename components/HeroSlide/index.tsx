@@ -25,7 +25,7 @@ const HeroSlide: FC<IHeroSlide> = ({
   children,
   withoutLogo,
 }) => {
-  const [isMenuOpen, setMenuOpen] = React.useState(true);
+  const [isMenuOpen, setMenuOpen] = React.useState(false);
 
   const pathname = usePathname();
 
