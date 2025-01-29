@@ -17,7 +17,9 @@ const LocationsPage = () => {
     type: "FeatureCollection",
     features: INVENTORY.map((unit) => ({
       type: "Feature",
-      properties: {},
+      properties: {
+        id: unit.id,
+      },
       geometry: {
         type: "Point",
         coordinates: unit.coords,

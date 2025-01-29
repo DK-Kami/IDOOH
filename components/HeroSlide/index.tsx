@@ -5,7 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import logo from "@/public/logo.svg";
-import { landingHeader, landingSubHeader } from "@/shared/theme";
+import { landingHeader } from "@/shared/theme";
 
 import MainMenu from "./MainMenu";
 
@@ -57,7 +57,7 @@ const HeroSlide: FC<IHeroSlide> = ({
 
       <div className={classes.heroTitle}>
         <div style={landingHeader}>{header}</div>
-        {subHeader && <div style={landingSubHeader}>{subHeader}</div>}
+        {subHeader && <div className={classes.heroSubHeader}>{subHeader}</div>}
       </div>
       {children}
     </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 
 import classes from "./index.module.css";
 
@@ -17,21 +17,17 @@ const ContactCard: FC<IContactCard> = ({
   title,
   description,
 }) => {
-  const [isShowDescription, setIsShowDescription] = useState(false);
-
   return (
-    <div
-      onMouseEnter={() => setIsShowDescription(true)}
-      onMouseLeave={() => setIsShowDescription(false)}
-      className={classes.contactCard}
-    >
-      <div
-        className={classes.contactPhoto}
-        style={{
-          backgroundImage: !isShowDescription ? `url(${imageSrc})` : "none",
-        }}
-      >
-        {isShowDescription && description}
+    <div className={classes.contactCard}>
+      <div className={classes.flipCard}>
+        <div className={classes.flipCardInner}>
+          <div
+            className={classes.flipCardFront}
+            style={{ backgroundImage: `url(${imageSrc})` }}
+          />
+
+          <div className={classes.flipCardBack}>{description}</div>
+        </div>
       </div>
 
       <div>

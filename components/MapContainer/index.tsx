@@ -1,11 +1,16 @@
 "use client";
 
 import React, { FC, PropsWithChildren } from "react";
-import { Layer, Map, MapEvent, Source } from "react-map-gl";
+import { Layer, Map, MapEvent, MapMouseEvent, Source } from "react-map-gl";
+import { useRouter } from "next/navigation";
 import { GeoJSON } from "geojson";
 
 import markerDropImage from "@/public/images/maker-drop.png";
-import { UNIT_SOURCE_NAME, UNITS_LAYER } from "@/utils/constants";
+import {
+  UNIT_LAYER_ID,
+  UNIT_SOURCE_NAME,
+  UNITS_LAYER,
+} from "@/utils/constants";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 
@@ -23,10 +28,25 @@ const MapContainer: FC<IMapContainer> = ({ markers }) => {
   const mapboxApiToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN ?? "";
   const mapboxStyleToken = process.env.NEXT_PUBLIC_MAPBOX_STYLE_TOKEN ?? "";
 
+  const router = useRouter();
+
   const handleOnLoad = (e: MapEvent) => {
     e.target.loadImage(markerDropImage.src, (error, image) => {
       if (error || !image) throw error;
       e.target.addImage("drop-marker", image);
+    });
+
+    e.target.on("click", UNIT_LAYER_ID, (event: MapMouseEvent) => {
+      if (event.features?.length) {
+        const { id } = event.features[0].properties as { id: number };
+        router.push(`/locations/${id}`);
+      }
+    });
+    e.target.on("mouseenter", UNIT_SOURCE_NAME, () => {
+      e.target.getCanvas().style.cursor = "pointer";
+    });
+    e.target.on("mouseleave", UNIT_SOURCE_NAME, () => {
+      e.target.getCanvas().style.cursor = "";
     });
   };
 

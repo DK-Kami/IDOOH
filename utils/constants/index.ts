@@ -99,7 +99,7 @@ export const INVENTORY: Record<
     ],
     photos: [szrPalmPhoto1.src, szrPalmPhoto2.src],
     heroPhoto: beirutHero.src,
-    coords: [55.0226883, 24.9339112],
+    coords: [55.0226873, 24.9339072],
   },
   {
     id: 4,
@@ -121,7 +121,7 @@ export const INVENTORY: Record<
     ],
     photos: [szrPalm2Photo1.src, szrPalm2Photo2.src],
     heroPhoto: beirutHero.src,
-    coords: [54.9728838, 24.9739086],
+    coords: [55.0447173, 24.9415782],
   },
   {
     id: 5,
@@ -144,14 +144,16 @@ export const INVENTORY: Record<
 ];
 
 export const UNIT_SOURCE_NAME = "UNIT_SOURCE_NAME";
+export const UNIT_LAYER_ID = "UNIT_LAYER_ID";
 
 export const UNITS_LAYER: LayerProps = {
-  id: "UNIT_LAYER_ID",
+  id: UNIT_LAYER_ID,
   type: "symbol",
   source: UNIT_SOURCE_NAME,
   layout: {
     "icon-allow-overlap": true,
     "icon-image": "drop-marker",
     "icon-size": 1,
+    "icon-anchor": "bottom",
   },
 };
