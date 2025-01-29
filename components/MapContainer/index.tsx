@@ -42,10 +42,10 @@ const MapContainer: FC<IMapContainer> = ({ markers }) => {
         router.push(`/locations/${id}`);
       }
     });
-    e.target.on("mouseenter", UNIT_SOURCE_NAME, () => {
+    e.target.on("mouseenter", UNIT_LAYER_ID, () => {
       e.target.getCanvas().style.cursor = "pointer";
     });
-    e.target.on("mouseleave", UNIT_SOURCE_NAME, () => {
+    e.target.on("mouseleave", UNIT_LAYER_ID, () => {
       e.target.getCanvas().style.cursor = "";
     });
   };
