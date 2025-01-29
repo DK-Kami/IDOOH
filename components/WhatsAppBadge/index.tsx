@@ -14,10 +14,11 @@ const WhatsAppBadge = () => {
 
   return (
     <div className={classes.badge} onClick={openWhatsApp}>
-      <div>Get in touch</div>
+      <div className={classes.badgeText}>Get in touch</div>
       <Image
         src={whatsAppIcon.src}
         alt="what's app logo"
+        className={classes.badgeImage}
         width="50"
         height="50"
       />

@@ -54,7 +54,7 @@ const MapContainer: FC<IMapContainer> = ({ markers, center }) => {
   };
 
   const defaultMapOptions = {
-    zoom: 10,
+    zoom: 9,
     longitude: center?.[0] ?? 55.2678473,
     latitude: center?.[1] ?? 25.1278632,
   };
