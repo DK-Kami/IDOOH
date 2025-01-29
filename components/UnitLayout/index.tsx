@@ -77,7 +77,10 @@ const UnitLayout: FC<IUnitLayout> = ({ id }) => {
 
       <div className={classes.unitMapContainer}>
         <div className={classes.unitMapTitle}>Map</div>
-        <MapContainer markers={markers} />
+        <MapContainer
+          center={unit.coords as [number, number]}
+          markers={markers}
+        />
       </div>
     </div>
   );

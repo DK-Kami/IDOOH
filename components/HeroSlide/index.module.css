@@ -19,6 +19,9 @@
   display: flex;
   justify-content: space-between;
 }
+.heroLogo {
+  width: 200px;
+}
 
 .heroTitle {
   display: flex;
@@ -27,6 +30,16 @@
   margin-top: 35vh;
 }
 
+.landingHeader {
+  font-size: 128px;
+  line-height: 120px;
+  font-weight: 600;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 28px;
+    line-height: 20px;
+  }
+}
 .heroSubHeader {
   width: 50%;
   font-weight: 400;

@@ -5,7 +5,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import logo from "@/public/logo.svg";
-import { landingHeader } from "@/shared/theme";
 
 import MainMenu from "./MainMenu";
 
@@ -39,7 +38,11 @@ const HeroSlide: FC<IHeroSlide> = ({
       {isMenuOpen && <MainMenu />}
 
       <div className={classes.heroHeader}>
-        {withoutLogo ? <div /> : <Image src={logo} alt="" />}
+        {withoutLogo ? (
+          <div />
+        ) : (
+          <Image src={logo} alt="" className={classes.heroLogo} />
+        )}
 
         <svg
           id="hamburger"
@@ -56,7 +59,7 @@ const HeroSlide: FC<IHeroSlide> = ({
       </div>
 
       <div className={classes.heroTitle}>
-        <div style={landingHeader}>{header}</div>
+        <div className={classes.landingHeader}>{header}</div>
         {subHeader && <div className={classes.heroSubHeader}>{subHeader}</div>}
       </div>
       {children}

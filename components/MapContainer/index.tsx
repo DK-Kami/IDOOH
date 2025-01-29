@@ -1,7 +1,14 @@
 "use client";
 
 import React, { FC, PropsWithChildren } from "react";
-import { Layer, Map, MapEvent, MapMouseEvent, Source } from "react-map-gl";
+import {
+  Layer,
+  Map,
+  MapEvent,
+  MapMouseEvent,
+  NavigationControl,
+  Source,
+} from "react-map-gl";
 import { useRouter } from "next/navigation";
 import { GeoJSON } from "geojson";
 
@@ -16,15 +23,10 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 interface IMapContainer extends PropsWithChildren {
   markers: GeoJSON;
+  center?: [number, number];
 }
 
-const defaultMapOptions = {
-  zoom: 10,
-  longitude: 55.2678473,
-  latitude: 25.0878632,
-};
-
-const MapContainer: FC<IMapContainer> = ({ markers }) => {
+const MapContainer: FC<IMapContainer> = ({ markers, center }) => {
   const mapboxApiToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN ?? "";
   const mapboxStyleToken = process.env.NEXT_PUBLIC_MAPBOX_STYLE_TOKEN ?? "";
 
@@ -39,6 +41,7 @@ const MapContainer: FC<IMapContainer> = ({ markers }) => {
     e.target.on("click", UNIT_LAYER_ID, (event: MapMouseEvent) => {
       if (event.features?.length) {
         const { id } = event.features[0].properties as { id: number };
+        if (!id) return;
         router.push(`/locations/${id}`);
       }
     });
@@ -50,6 +53,12 @@ const MapContainer: FC<IMapContainer> = ({ markers }) => {
     });
   };
 
+  const defaultMapOptions = {
+    zoom: 10,
+    longitude: center?.[0] ?? 55.2678473,
+    latitude: center?.[1] ?? 25.1278632,
+  };
+
   return (
     <Map
       initialViewState={defaultMapOptions}
@@ -59,6 +68,7 @@ const MapContainer: FC<IMapContainer> = ({ markers }) => {
       onLoad={handleOnLoad}
       scrollZoom={false}
     >
+      <NavigationControl showCompass={false} />
       <Source
         id={UNIT_SOURCE_NAME}
         type="geojson"
