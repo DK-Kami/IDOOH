@@ -1,14 +1,26 @@
 .contactCard {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  width: 25%;
+  gap: 10px;
+  width: 100%;
   cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    width: 45%;
+    gap: 30px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 30%;
+  }
 }
 
 .flipCard {
   background-color: transparent;
-  height: 540px;
+  height: 360px;
+
+  @media screen and (min-width: 768px) {
+    height: 540px;
+  }
 }
 
 .flipCardInner {
@@ -34,25 +46,51 @@
 }
 
 .flipCardFront {
-  height: 540px;
+  height: 360px;
   background-size: cover;
   background-position: center center;
+
+  @media screen and (min-width: 768px) {
+    height: 540px;
+  }
 }
 
 .flipCardBack {
   background-color: var(--primary);
   color: var(--white);
   transform: rotateY(180deg);
-  height: 540px;
-  padding: 40px 50px;
-  font-size: 24px;
+  height: 360px;
   font-weight: 500;
+  padding: 16px;
+  font-size: 18px;
+
+  @media screen and (min-width: 425px) {
+    padding: 24px;
+    font-size: 22px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 24px;
+    font-size: 24px;
+    height: 540px;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 30px;
+    font-size: 26px;
+  }
 }
 
 .contactName {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
+
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
 }
 .contactTitle {
-  font-size: 32px;
+  font-size: 24px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
 }

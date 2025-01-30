@@ -4,11 +4,15 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 64px;
     background: var(--white);
     color: var(--black);
     position: relative;
     overflow: hidden;
+    padding: 30px;
+
+    @media screen and (min-width: 768px) {
+        padding: 64px;
+    }
 }
 
 .slideRed {

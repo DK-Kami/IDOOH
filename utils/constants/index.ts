@@ -1,4 +1,5 @@
 import { LayerProps } from "react-map-gl";
+import { Metadata } from "next";
 
 import alAinHero from "./public/al-ain-road-hero.jpg";
 import alAinPhoto1 from "./public/al-ain-road-photo-1.jpg";
@@ -156,4 +157,17 @@ export const UNITS_LAYER: LayerProps = {
     "icon-size": 1,
     "icon-anchor": "bottom",
   },
+};
+
+export const baseMetadata: Metadata = {
+  description:
+    "IDOOH is a new provider in the outdoor advertising market in Dubai, dedicated to delivering high-quality service.",
+  keywords: [
+    "IDOOH",
+    "Contacts",
+    "CEO",
+    "Ilya Bulygin",
+    "Mariia Faldina",
+    "+971 58 173 3443",
+  ],
 };

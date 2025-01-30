@@ -1,4 +1,5 @@
 import React from "react";
+import { Metadata } from "next";
 import Image from "next/image";
 
 import HeroSlide from "@/components/HeroSlide";
@@ -6,9 +7,15 @@ import LeadershipList from "@/components/LeadershipList";
 import Slide from "@/components/Slide";
 import aboutCircle from "@/public/images/about-circle.png";
 import heroAbout from "@/public/images/hero-about.jpg";
-import { footerHeader } from "@/shared/theme";
+import global from "@/shared/theme/global.module.css";
+import { baseMetadata } from "@/utils/constants";
 
 import classes from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "IDOOH",
+  ...baseMetadata,
+};
 
 const AboutPage = () => {
   return (
@@ -18,7 +25,11 @@ const AboutPage = () => {
       <Slide>
         <div className={classes.aboutContainer}>
           <div className={classes.aboutBody}>
-            <Image src={aboutCircle} alt="IDOOH circle" />
+            <Image
+              src={aboutCircle}
+              alt="IDOOH circle"
+              className={classes.aboutBodyImage}
+            />
 
             <div className={classes.aboutText}>
               IDOOH is a new provider of outdoor advertising in Dubai, dedicated
@@ -31,7 +42,7 @@ const AboutPage = () => {
       </Slide>
 
       <Slide isRedSlide>
-        <div style={footerHeader}>
+        <div className={global.footerHeader}>
           20+ years <br />
           of experience
         </div>

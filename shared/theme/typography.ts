@@ -1,20 +1,5 @@
 import localFont from "next/font/local";
 
-export const landingHeader = {
-  fontSize: "128px",
-  lineHeight: "120px",
-  fontWeight: 600,
-};
-export const landingSubHeader = {
-  fontSize: "28px",
-  fontWeight: 600,
-};
-export const footerHeader = {
-  fontSize: "160px",
-  lineHeight: "150px",
-  fontWeight: 600,
-};
-
 export const satoshiFont = localFont({
   src: [
     {

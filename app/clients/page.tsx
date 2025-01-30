@@ -4,7 +4,7 @@ import HeroSlide from "@/components/HeroSlide";
 import Slide from "@/components/Slide";
 import greyLogo from "@/public/grey-logo.svg";
 import heroClients from "@/public/images/hero-clients.jpg";
-import { footerHeader } from "@/shared/theme";
+import global from "@/shared/theme/global.module.css";
 
 import classes from "./page.module.css";
 
@@ -26,7 +26,7 @@ const ClientsPage = () => {
         ))}
       </div>
       <Slide isRedSlide>
-        <div style={footerHeader}>
+        <div className={global.footerHeader}>
           Our Dubai story <br /> is just beginning
         </div>
       </Slide>
