@@ -18,17 +18,14 @@
 }
 
 .mainMenu a {
-  font-size: 70px;
   font-weight: 600;
   color: var(--white);
+  font-size: 36px;
 
-  @media screen and (max-width: 1440px) {
-    font-size: 62px;
+  @media screen and (min-width: 1024px) {
+    font-size: 48px;
   }
-  @media screen and (max-width: 1024px) {
-    font-size: 54px;
-  }
-  @media screen and (max-width: 768px) {
-    font-size: 44px;
+  @media screen and (min-width: 1440px) {
+    font-size: 64px;
   }
 }

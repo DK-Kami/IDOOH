@@ -4,14 +4,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 30px 64px;
+  padding: 30px;
   color: var(--white);
   background-color: var(--primary);
   display: flex;
   position: relative;
 
-  @media screen and (max-width: 425px) {
-    padding: 30px;
+  @media screen and (min-width: 768px) {
+    padding: 30px 64px;
   }
 }
 
@@ -80,24 +80,23 @@
   }
 }
 .heroSubHeader {
-  width: 60%;
+  font-size: 13px;
+  width: 100%;
   font-weight: 400;
-  font-size: 24px;
 
-  @media screen and (max-width: 1440px) {
-    font-size: 20px;
+  @media screen and (min-width: 425px) {
+    font-size: 16px;
   }
-  @media screen and (max-width: 1024px) {
+  @media screen and (min-width: 768px) {
+    width: 80%;
     font-size: 18px;
   }
-  @media screen and (max-width: 768px) {
-    font-size: 16px;
+  @media screen and (min-width: 1024px) {
+    font-size: 20px;
+    width: 60%;
   }
-  @media screen and (max-width: 425px) {
-    font-size: 16px;
-  }
-  @media screen and (max-width: 425px) {
-    font-size: 16px;
-    width: 80%;
+  @media screen and (min-width: 1440px) {
+    width: 50%;
+    font-size: 24px;
   }
 }
