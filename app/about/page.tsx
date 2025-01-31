@@ -13,7 +13,7 @@ import { baseMetadata } from "@/utils/constants";
 import classes from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "IDOOH",
+  title: "About us",
   ...baseMetadata,
 };
 

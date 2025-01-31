@@ -1,12 +1,19 @@
 import React from "react";
+import { Metadata } from "next";
 
 import HeroSlide from "@/components/HeroSlide";
 import Slide from "@/components/Slide";
 import greyLogo from "@/public/grey-logo.svg";
 import heroClients from "@/public/images/hero-clients.jpg";
 import global from "@/shared/theme/global.module.css";
+import { baseMetadata } from "@/utils/constants";
 
 import classes from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "Clients",
+  ...baseMetadata,
+};
 
 const ClientsPage = () => {
   return (

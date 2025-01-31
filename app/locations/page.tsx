@@ -1,6 +1,5 @@
-"use client";
-
 import React from "react";
+import { Metadata } from "next";
 import { GeoJSON } from "geojson";
 
 import HeroSlide from "@/components/HeroSlide";
@@ -8,9 +7,14 @@ import MapContainer from "@/components/MapContainer";
 import Slide from "@/components/Slide";
 import UnitCard from "@/components/UnitCard";
 import heroLocations from "@/public/images/hero-locations.jpg";
-import { INVENTORY } from "@/utils/constants";
+import { baseMetadata, INVENTORY } from "@/utils/constants";
 
 import classes from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "Locations",
+  ...baseMetadata,
+};
 
 const LocationsPage = () => {
   const inventoryGeoJson = {

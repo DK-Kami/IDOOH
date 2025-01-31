@@ -1,8 +1,15 @@
 import React from "react";
+import { Metadata } from "next";
 
 import HeroSlide from "@/components/HeroSlide";
+import { baseMetadata } from "@/utils/constants";
 
 import classes from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "Contacts",
+  ...baseMetadata,
+};
 
 const ContactsPage = () => {
   return (
