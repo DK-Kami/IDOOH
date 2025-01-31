@@ -3,22 +3,68 @@
   gap: 26px;
 }
 
-.descriptionItemImageWrapper {
-  width: 40px;
+.descriptionItemImage {
+  width: 18px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 8px 0;
+
+  @media screen and (min-width: 768px) {
+    width: 24px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 40px;
+  }
 }
 
 .descriptionItemContainer {
+  width: calc(100% - 18px);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
+
+  @media screen and (min-width: 768px) {
+    width: calc(100% - 24px);
+    gap: 12px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: calc(100% - 32px);
+  }
+  @media screen and (min-width: 1440px) {
+    width: calc(100% - 40px);
+  }
 }
 
 .descriptionItemTitle {
-  font-size: 32px;
+  font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 32px;
+  }
 }
 .descriptionItemValue {
-  font-size: 28px;
+  font-size: 14px;
   font-weight: 500;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 28px;
+  }
 }

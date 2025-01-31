@@ -21,11 +21,11 @@ const UnitLayout: FC<IUnitLayout> = ({ id }) => {
   const unit = INVENTORY.find((unit) => unit.id === id);
 
   const descriptionItems = [
-    { title: "location", icon: locationIcon },
-    { title: "media", icon: mediaIcon },
-    { title: "traffic", icon: trafficIcon },
-    { title: "landmarks", icon: searchIcon },
-    { title: "size", icon: sizeIcon },
+    { title: "location", icon: locationIcon.src },
+    { title: "media", icon: mediaIcon.src },
+    { title: "traffic", icon: trafficIcon.src },
+    { title: "size", icon: sizeIcon.src },
+    { title: "landmarks", icon: searchIcon.src },
   ];
 
   if (!unit) return <></>;

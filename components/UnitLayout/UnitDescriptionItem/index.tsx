@@ -1,10 +1,9 @@
 import React, { FC } from "react";
-import Image, { StaticImageData } from "next/image";
 
 import classes from "./index.module.css";
 
 interface IUnitDescriptionItem {
-  icon: StaticImageData;
+  icon: string;
   title: string;
   value: string | number | string[] | number[];
 }
@@ -16,13 +15,10 @@ const UnitDescriptionItem: FC<IUnitDescriptionItem> = ({
 }) => {
   return (
     <div className={classes.descriptionItem}>
-      <div className={classes.descriptionItemImageWrapper}>
-        <Image
-          alt={`${title} icon`}
-          {...icon}
-          className={classes.descriptionItemImage}
-        />
-      </div>
+      <div
+        className={classes.descriptionItemImage}
+        style={{ backgroundImage: `url(${icon})` }}
+      />
       <div className={classes.descriptionItemContainer}>
         <div className={classes.descriptionItemTitle}>{title}</div>
         <div className={classes.descriptionItemValue}>
