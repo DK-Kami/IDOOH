@@ -10,9 +10,10 @@ import {
   Source,
 } from "react-map-gl";
 import { useRouter } from "next/navigation";
-import { GeoJSON } from "geojson";
 
 import markerDropImage from "@/public/images/maker-drop.png";
+import { TGeoJson } from "@/shared/types";
+import { getMultiPolygonBounds } from "@/utils";
 import {
   UNIT_LAYER_ID,
   UNIT_SOURCE_NAME,
@@ -22,11 +23,16 @@ import {
 import "mapbox-gl/dist/mapbox-gl.css";
 
 interface IMapContainer extends PropsWithChildren {
-  markers: GeoJSON;
+  markers: TGeoJson;
   center?: [number, number];
+  withFitBounds?: boolean;
 }
 
-const MapContainer: FC<IMapContainer> = ({ markers, center }) => {
+const MapContainer: FC<IMapContainer> = ({
+  markers,
+  center,
+  withFitBounds,
+}) => {
   const mapboxApiToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN ?? "";
   const mapboxStyleToken = process.env.NEXT_PUBLIC_MAPBOX_STYLE_TOKEN ?? "";
 
@@ -51,6 +57,12 @@ const MapContainer: FC<IMapContainer> = ({ markers, center }) => {
     e.target.on("mouseleave", UNIT_LAYER_ID, () => {
       e.target.getCanvas().style.cursor = "";
     });
+
+    if (!withFitBounds) return;
+    const coordinates = markers.features.map(
+      (feature) => feature.geometry.coordinates,
+    );
+    e.target.fitBounds(getMultiPolygonBounds(coordinates), { padding: 100 });
   };
 
   const defaultMapOptions = {
@@ -67,6 +79,7 @@ const MapContainer: FC<IMapContainer> = ({ markers, center }) => {
       mapboxAccessToken={mapboxApiToken}
       onLoad={handleOnLoad}
       scrollZoom={false}
+      minZoom={5}
     >
       <NavigationControl showCompass={false} />
       <Source

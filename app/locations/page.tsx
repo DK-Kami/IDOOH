@@ -1,12 +1,12 @@
 import React from "react";
 import { Metadata } from "next";
-import { GeoJSON } from "geojson";
 
 import HeroSlide from "@/components/HeroSlide";
 import MapContainer from "@/components/MapContainer";
 import Slide from "@/components/Slide";
 import UnitCard from "@/components/UnitCard";
 import heroLocations from "@/public/images/hero-locations.jpg";
+import { TGeoJson } from "@/shared/types";
 import { baseMetadata, INVENTORY } from "@/utils/constants";
 
 import classes from "./page.module.css";
@@ -29,14 +29,14 @@ const LocationsPage = () => {
         coordinates: unit.coords,
       },
     })),
-  } as GeoJSON;
+  } as TGeoJson;
 
   return (
     <div>
       <HeroSlide url={heroLocations.src} header="Locations" />
 
       <Slide>
-        <MapContainer markers={inventoryGeoJson} />
+        <MapContainer markers={inventoryGeoJson} withFitBounds />
       </Slide>
 
       <div className={classes.creativeList}>

@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { GeoJSON } from "geojson";
 
 import HeroSlide from "@/components/HeroSlide";
 import MapContainer from "@/components/MapContainer";
@@ -9,6 +8,7 @@ import mediaIcon from "@/public/icons/media-icon.png";
 import searchIcon from "@/public/icons/search-icon.png";
 import sizeIcon from "@/public/icons/size-icon.png";
 import trafficIcon from "@/public/icons/traffic-icon.png";
+import { TGeoJson } from "@/shared/types";
 import { INVENTORY } from "@/utils/constants";
 
 import classes from "./index.module.css";
@@ -42,7 +42,7 @@ const UnitLayout: FC<IUnitLayout> = ({ id }) => {
         },
       },
     ],
-  } as GeoJSON;
+  } as TGeoJson;
 
   return (
     <div>
