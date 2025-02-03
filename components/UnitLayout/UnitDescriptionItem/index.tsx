@@ -13,7 +13,7 @@ const UnitDescriptionItem: FC<IUnitDescriptionItem> = ({
   title,
   value,
 }) => {
-  const renderLandMarkItem = (landmark: string | number, index: number) => (
+  const renderLandMarkItem = (landmark: string | number) => (
     <div key={landmark}>
       {landmark}
       {/*{index !== (value as string[]).length - 1 && ","}*/}
