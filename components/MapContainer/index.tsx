@@ -44,6 +44,7 @@ const MapContainer: FC<IMapContainer> = ({
       e.target.addImage("drop-marker", image);
     });
 
+    if (!withFitBounds) return;
     e.target.on("click", UNIT_LAYER_ID, (event: MapMouseEvent) => {
       if (event.features?.length) {
         const { id } = event.features[0].properties as { id: number };
@@ -58,13 +59,12 @@ const MapContainer: FC<IMapContainer> = ({
       e.target.getCanvas().style.cursor = "";
     });
 
-    if (!withFitBounds) return;
     const coordinates = markers.features.map(
       (feature) => feature.geometry.coordinates,
     );
     e.target.fitBounds(getMultiPolygonBounds(coordinates), {
       padding: {
-        top: 60,
+        top: 75,
         bottom: 30,
         left: 30,
         right: 30,
