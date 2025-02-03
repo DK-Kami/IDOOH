@@ -48,7 +48,7 @@
 .flipCardFront {
   height: 360px;
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
 
   @media screen and (min-width: 768px) {
