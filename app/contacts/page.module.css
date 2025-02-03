@@ -63,6 +63,9 @@
 }
 
 .contactsFooter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   font-weight: 500;
   opacity: 0.5;
   margin-top: 14px;

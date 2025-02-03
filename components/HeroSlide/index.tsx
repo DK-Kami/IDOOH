@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, PropsWithChildren, useEffect } from "react";
+import React, { FC, JSX, PropsWithChildren, useEffect } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
@@ -12,8 +12,8 @@ import "./hamburger.css";
 import classes from "./index.module.css";
 
 interface IHeroSlide extends PropsWithChildren {
-  header?: string;
-  subHeader?: string;
+  header?: string | JSX.Element;
+  subHeader?: string | JSX.Element;
   url?: string;
   withoutLogo?: boolean;
 }

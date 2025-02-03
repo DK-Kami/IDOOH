@@ -62,7 +62,14 @@ const MapContainer: FC<IMapContainer> = ({
     const coordinates = markers.features.map(
       (feature) => feature.geometry.coordinates,
     );
-    e.target.fitBounds(getMultiPolygonBounds(coordinates), { padding: 100 });
+    e.target.fitBounds(getMultiPolygonBounds(coordinates), {
+      padding: {
+        top: 60,
+        bottom: 30,
+        left: 30,
+        right: 30,
+      },
+    });
   };
 
   const defaultMapOptions = {

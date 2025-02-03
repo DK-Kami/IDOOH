@@ -5,7 +5,7 @@ import UnitLayout from "@/components/UnitLayout";
 import { baseMetadata } from "@/utils/constants";
 
 export const metadata: Metadata = {
-  title: "SMBZ City Centre Mirdif",
+  title: "SMBZ Mirdif City Centre",
   ...baseMetadata,
 };
 

@@ -44,7 +44,7 @@ const LocationsPage = () => {
           <UnitCard
             key={creative.name as string}
             creativeId={creative.id as number}
-            creativeName={creative.name as string}
+            creativeName={`${creative.street} ${creative.name}`}
             creativePhotoUrl={(creative.photos as string[])[0]}
           />
         ))}

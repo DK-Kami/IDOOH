@@ -21,8 +21,9 @@ const ContactsPage = () => {
           <div className={classes.contactsItem}>
             <div className={classes.contactsItemTitle}>Office</div>
             <div className={classes.contactsItemValue}>
-              1301-0165, floor 13, The One Tower, Sheik Zayed Road, Barsha
-              Heights, TECOM, Dubai, UAE
+              1301-0165, floor 13, The One Tower, <br />
+              Sheik Zayed Road, Barsha Heights, <br />
+              TECOM, Dubai, UAE
             </div>
           </div>
           <div className={classes.contactsItem}>
@@ -35,7 +36,8 @@ const ContactsPage = () => {
           </div>
 
           <div className={classes.contactsFooter}>
-            © Copyright 2024 IDOOH LLC. All rights reserved.
+            <div>© Copyright 2024 IDOOH LLC.</div>{" "}
+            <div>All rights reserved.</div>
           </div>
         </div>
       </HeroSlide>

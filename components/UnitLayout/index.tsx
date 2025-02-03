@@ -46,7 +46,14 @@ const UnitLayout: FC<IUnitLayout> = ({ id }) => {
 
   return (
     <div>
-      <HeroSlide header={unit.name as string} url={unit.heroPhoto as string} />
+      <HeroSlide
+        header={
+          <>
+            {unit.street} <br /> {unit.name}
+          </>
+        }
+        url={unit.heroPhoto as string}
+      />
       {/*<div*/}
       {/*  className={classes.unitPageHero}*/}
       {/*  style={{ backgroundImage: `url(${unit.heroPhoto})` }}*/}

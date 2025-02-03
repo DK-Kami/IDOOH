@@ -1,5 +1,3 @@
-"use client";
-
 import React, { FC } from "react";
 
 import classes from "./index.module.css";
@@ -21,6 +19,13 @@ const ContactCard: FC<IContactCard> = ({
     <div className={classes.contactCard}>
       <div className={classes.flipCard}>
         <div className={classes.flipCardInner}>
+          {/*<Image*/}
+          {/*  src={imageSrc}*/}
+          {/*  alt="Contact photo"*/}
+          {/*  width="200"*/}
+          {/*  height="200"*/}
+          {/*  className={classes.flipCardFront}*/}
+          {/*/>*/}
           <div
             className={classes.flipCardFront}
             style={{ backgroundImage: `url(${imageSrc})` }}

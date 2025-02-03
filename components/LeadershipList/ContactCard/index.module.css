@@ -49,6 +49,7 @@
   height: 360px;
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
 
   @media screen and (min-width: 768px) {
     height: 540px;
@@ -59,10 +60,12 @@
   background-color: var(--primary);
   color: var(--white);
   transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
   height: 360px;
   font-weight: 500;
   padding: 16px;
-  font-size: 18px;
+  font-size: 16px;
 
   @media screen and (min-width: 425px) {
     padding: 24px;
