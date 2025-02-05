@@ -1,9 +1,7 @@
 import { Metadata } from "next";
 
-import HeroSlide from "@/components/HeroSlide";
+import HomeHero from "@/components/HomeHero";
 import { baseMetadata } from "@/utils/constants";
-
-import heroMain from "../public/images/hero-main.jpg";
 
 export const metadata: Metadata = {
   title: "IDOOH",
@@ -13,11 +11,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div>
-      <HeroSlide
-        url={heroMain.src}
-        header="We just know how"
-        subHeader="DOWNLOAD MEDIAKIT"
-      />
+      <HomeHero />
     </div>
   );
 }

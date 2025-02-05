@@ -14,6 +14,7 @@ import classes from "./index.module.css";
 interface IHeroSlide extends PropsWithChildren {
   header?: string | JSX.Element;
   subHeader?: string | JSX.Element;
+  onClickSubheader?: () => void;
   url?: string;
   withoutLogo?: boolean;
 }
@@ -21,6 +22,7 @@ interface IHeroSlide extends PropsWithChildren {
 const HeroSlide: FC<IHeroSlide> = ({
   header,
   subHeader,
+  onClickSubheader,
   url,
   children,
   withoutLogo,
@@ -60,7 +62,15 @@ const HeroSlide: FC<IHeroSlide> = ({
 
       <div className={classes.heroTitle}>
         <div className={classes.landingHeader}>{header}</div>
-        {subHeader && <div className={classes.heroSubHeader}>{subHeader}</div>}
+        {subHeader && (
+          <div
+            className={classes.heroSubHeader}
+            style={{ cursor: onClickSubheader ? "pointer" : "unset" }}
+            onClick={onClickSubheader}
+          >
+            {subHeader}
+          </div>
+        )}
       </div>
       {children}
     </div>
