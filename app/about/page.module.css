@@ -1,6 +1,7 @@
 .aboutContainer {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 .aboutBody {
   display: flex;
@@ -26,13 +27,12 @@
 }
 
 .aboutText {
-  font-size: 20px;
+  font-size: 26px;
   line-height: 35px;
   font-weight: 500;
 
   @media screen and (min-width: 768px) {
     width: 60%;
-    font-size: 26px;
     line-height: 42px;
   }
   @media screen and (min-width: 1024px) {
@@ -40,27 +40,37 @@
     line-height: 54px;
   }
   @media screen and (min-width: 1440px) {
-    font-size: 42px;
+    font-size: 52px;
     line-height: 70px;
   }
 }
 .aboutFooter {
-  font-size: 20px;
   font-weight: 500;
-  margin-top: 10%;
+  margin-top: auto;
 
   @media screen and (min-width: 768px) {
-    font-size: 28px;
     text-align: center;
   }
   @media screen and (min-width: 1024px) {
     font-size: 36px;
   }
   @media screen and (min-width: 1440px) {
-    font-size: 40px;
+    font-size: 50px;
   }
 }
 
+.leadershipContainer {
+  padding: 50px 30px;
+
+  @media screen and (min-width: 425px) {
+  }
+  @media screen and (min-width: 768px) {
+    padding: 50px;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 80px 65px;
+  }
+}
 .leadershipTitle {
   font-size: 32px;
   line-height: 40px;

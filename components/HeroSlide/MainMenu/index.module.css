@@ -17,7 +17,7 @@
   }
 }
 
-.mainMenu > div {
+.mainMenu a {
   font-weight: 600;
   color: var(--white);
   font-size: 36px;
