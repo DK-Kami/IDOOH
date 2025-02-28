@@ -35,7 +35,7 @@ const LocationsPage = () => {
     <div id="locations">
       <HeroSlide url={heroLocations.src} isParallax header="Locations" />
 
-      <Slide>
+      <Slide isSmall>
         <MapContainer markers={inventoryGeoJson} withFitBounds />
       </Slide>
 
