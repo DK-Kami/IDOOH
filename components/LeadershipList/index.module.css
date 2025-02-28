@@ -1,12 +1,13 @@
 .leadershipList {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   flex-wrap: wrap;
   gap: 25px;
 
   @media screen and (min-width: 1024px) {
     font-size: 62px;
+    padding: 30px;
     gap: 50px;
   }
 }

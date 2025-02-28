@@ -10,7 +10,7 @@ import heroAbout from "@/public/images/hero-about.jpg";
 import global from "@/shared/theme/global.module.css";
 import { baseMetadata } from "@/utils/constants";
 
-import classes from "./index.module.css";
+import classes from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "About us",
@@ -19,8 +19,10 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <div id="about">
-      <Slide isSmall>
+    <div>
+      <HeroSlide url={heroAbout.src} header="About us" />
+
+      <Slide>
         <div className={classes.aboutContainer}>
           <div className={classes.aboutBody}>
             <Image
@@ -39,38 +41,33 @@ const AboutPage = () => {
         </div>
       </Slide>
 
-      <Slide isRedSlide isSmall>
+      <Slide isRedSlide>
         <div className={global.footerHeader}>
           20+ years <br />
           of experience
         </div>
       </Slide>
 
-      <HeroSlide url={heroAbout.src} isParallax header="About us" />
-
-      <Slide>
-        <div>
-          <div className={classes.leadershipTitle}>Our leadership team</div>
-          <div className={classes.leadershipText}>
-            With 20 years of international experience in media and outdoor
-            advertising across Europe and the MENA region, our team is dedicated
-            to delivering exceptional results by creating advertising solutions
-            with proven effectiveness. We leverage our accumulated expertise to
-            develop strategic approach for building effective advertising
-            networks.
-          </div>
-          <div className={classes.leadershipText}>
-            Our commitment to high standards of customer service ensures
-            mutually beneficial collaboration with our clients. Creativity is at
-            the heart of what we do, driving campaigns that truly work for your
-            business.
-          </div>
-
-          <div className={classes.leadershipList}>
-            <LeadershipList />
-          </div>
+      <div className={classes.leadershipContainer}>
+        <div className={classes.leadershipTitle}>Our leadership team</div>
+        <div className={classes.leadershipText}>
+          With 20 years of international experience in media and outdoor
+          advertising across Europe and the MENA region, our team is dedicated
+          to delivering exceptional results by creating advertising solutions
+          with proven effectiveness. We leverage our accumulated expertise to
+          develop strategic approach for building effective advertising
+          networks.
         </div>
-      </Slide>
+        <div className={classes.leadershipText}>
+          Our commitment to high standards of customer service ensures mutually
+          beneficial collaboration with our clients. Creativity is at the heart
+          of what we do, driving campaigns that truly work for your business.
+        </div>
+
+        <div className={classes.leadershipList}>
+          <LeadershipList />
+        </div>
+      </div>
     </div>
   );
 };

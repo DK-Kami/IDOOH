@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-import ScrollUpBadge from "@/components/ScrollUpBadge";
 import WhatsAppBadge from "@/components/WhatsAppBadge";
 import { satoshiFont } from "@/shared/theme";
 
@@ -21,7 +20,6 @@ export default function RootLayout({
       <body className={`${satoshiFont.className}`}>
         {children}
         <WhatsAppBadge />
-        <ScrollUpBadge />
       </body>
     </html>
   );
