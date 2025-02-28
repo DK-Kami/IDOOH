@@ -8,7 +8,7 @@ import heroClients from "@/public/images/hero-clients.jpg";
 import global from "@/shared/theme/global.module.css";
 import { baseMetadata } from "@/utils/constants";
 
-import classes from "./index.module.css";
+import classes from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Clients",
@@ -17,11 +17,10 @@ export const metadata: Metadata = {
 
 const ClientsPage = () => {
   return (
-    <div id="clients">
+    <div>
       <HeroSlide
         url={heroClients.src}
         header="Clients"
-        isParallax
         subHeader={
           <>
             Here could be a kaleidoscope of logos of brands and companies that
@@ -42,7 +41,7 @@ const ClientsPage = () => {
           />
         ))}
       </div>
-      <Slide isRedSlide isSmall>
+      <Slide isRedSlide>
         <div className={global.footerHeader}>
           Our Dubai story <br /> is just beginning
         </div>
