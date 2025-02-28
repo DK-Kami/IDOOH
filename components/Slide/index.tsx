@@ -11,12 +11,12 @@ interface ISlide extends PropsWithChildren {
 const Slide: FC<ISlide> = ({ style, isSmall, isRedSlide, children }) => {
   return (
     <div
-      style={{ minHeight: isSmall ? "50vh" : "100vh", ...style }}
+      style={{ minHeight: isSmall ? "65vh" : "100vh", ...style }}
       className={`${classes.slide} ${isRedSlide ? classes.slideRed : ""}`}
     >
       <div
         style={{
-          minHeight: isSmall ? "50vh" : "100vh",
+          minHeight: isSmall ? "65vh" : "100vh",
         }}
         className={classes.slideContainer}
       >
