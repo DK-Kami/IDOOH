@@ -1,10 +1,10 @@
 import React from "react";
 import { Metadata } from "next";
 
-import HeroSlide from "@/components/HeroSlide";
+import Slide from "@/components/Slide";
 import { baseMetadata } from "@/utils/constants";
 
-import classes from "./page.module.css";
+import classes from "./index.module.css";
 
 export const metadata: Metadata = {
   title: "Contacts",
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 const ContactsPage = () => {
   return (
-    <div>
-      <HeroSlide withoutLogo>
+    <div id="contacts">
+      <Slide>
         <div className={classes.contactsContainer}>
           <div className={classes.contactsTitle}>Contacts</div>
 
@@ -40,7 +40,7 @@ const ContactsPage = () => {
             <div>All rights reserved.</div>
           </div>
         </div>
-      </HeroSlide>
+      </Slide>
     </div>
   );
 };

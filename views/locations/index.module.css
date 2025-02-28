@@ -3,18 +3,13 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 35px 65px;
-  padding: 30px;
+  margin-top: -32px;
 
-  @media screen and (min-width: 425px) {
-  }
-  @media screen and (min-width: 768px) {
-    padding: 48px;
-  }
-  @media screen and (min-width: 1024px) {
-    padding: 64px;
-  }
   @media screen and (min-width: 1440px) {
     font-size: 24px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: -64px;
   }
 }
 

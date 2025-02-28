@@ -1,37 +1,26 @@
 .badge {
   position: fixed;
-  right: 120px;
+  right: 40px;
   bottom: 40px;
-  display: flex;
-  align-items: center;
-  gap: 45px;
   background-color: var(--primary);
   color: var(--white);
-  padding: 11px 13px 11px 65px;
-  font-weight: 500;
+  padding: 8px 14px;
   border-radius: 50px;
   cursor: pointer;
   transition: 0.3s;
   z-index: 2;
   border: 2px solid var(--white);
-  font-size: 22px;
 
   @media screen and (max-width: 1024px) {
-    padding: 11px 13px 11px 45px;
-    font-size: 22px;
-    gap: 32px;
-    right: 100px;
+    padding: 6px 12px;
     bottom: 20px;
+    right: 30px;
   }
   @media screen and (max-width: 768px) {
-    padding: 11px 13px 11px 25px;
-    font-size: 18px;
-    line-height: 18px;
-    gap: 24px;
+    padding: 4px 10px;
   }
   @media screen and (max-width: 425px) {
-    padding: 11px;
-    right: 70px;
+    right: 10px;
   }
 }
 
@@ -39,16 +28,9 @@
   transform: scale(1.1);
 }
 
-.badgeText {
-  display: block;
-  @media screen and (max-width: 425px) {
-    display: none;
-  }
-}
-
 .badgeImage {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
 
   @media screen and (max-width: 1440px) {
     width: 25px;

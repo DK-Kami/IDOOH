@@ -81,7 +81,7 @@ const MapContainer: FC<IMapContainer> = ({
   return (
     <Map
       initialViewState={defaultMapOptions}
-      style={{ width: "100%", height: "100%" }}
+      style={{ width: "100%", height: "65vh" }}
       mapStyle={mapboxStyleToken}
       mapboxAccessToken={mapboxApiToken}
       onLoad={handleOnLoad}
