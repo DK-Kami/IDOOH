@@ -4,7 +4,6 @@ import React, { FC, JSX, PropsWithChildren, useEffect } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-import Slide from "@/components/Slide";
 import logo from "@/public/logo.svg";
 
 import MainMenu from "./MainMenu";
@@ -17,8 +16,7 @@ interface IHeroSlide extends PropsWithChildren {
   subHeader?: string | JSX.Element;
   onClickSubheader?: () => void;
   url?: string;
-  withoutActions?: boolean;
-  isParallax?: boolean;
+  withoutLogo?: boolean;
 }
 
 const HeroSlide: FC<IHeroSlide> = ({
@@ -27,8 +25,7 @@ const HeroSlide: FC<IHeroSlide> = ({
   onClickSubheader,
   url,
   children,
-  withoutActions,
-  isParallax,
+  withoutLogo,
 }) => {
   const [isMenuOpen, setMenuOpen] = React.useState(false);
 
@@ -39,37 +36,28 @@ const HeroSlide: FC<IHeroSlide> = ({
   }, [pathname]);
 
   return (
-    <Slide
-      style={{
-        backgroundImage: `url(${url})`,
-        backgroundAttachment: isParallax ? "fixed" : "unset",
-      }}
-      isSmall={isParallax}
-      isRedSlide
-    >
-      {isMenuOpen && <MainMenu onCloseMenu={() => setMenuOpen(false)} />}
+    <div className={classes.hero} style={{ backgroundImage: `url(${url})` }}>
+      {isMenuOpen && <MainMenu />}
 
-      <div id="home" className={classes.heroHeader}>
-        {isParallax || withoutActions ? (
+      <div className={classes.heroHeader}>
+        {withoutLogo ? (
           <div />
         ) : (
           <Image src={logo} alt="" className={classes.heroLogo} />
         )}
 
-        {!isParallax && (
-          <svg
-            id="hamburger"
-            className={isMenuOpen ? "open" : "close"}
-            viewBox="0 0 60 40"
-            onClick={() => setMenuOpen(!isMenuOpen)}
-          >
-            <g stroke="#fff" strokeWidth="4">
-              <path id="top-line" d="M10,10 L50,10 Z"></path>
-              <path id="middle-line" d="M10,20 L50,20 Z"></path>
-              <path id="bottom-line" d="M10,30 L50,30 Z"></path>
-            </g>
-          </svg>
-        )}
+        <svg
+          id="hamburger"
+          className={isMenuOpen ? "open" : "close"}
+          viewBox="0 0 60 40"
+          onClick={() => setMenuOpen(!isMenuOpen)}
+        >
+          <g stroke="#fff" strokeWidth="4">
+            <path id="top-line" d="M10,10 L50,10 Z"></path>
+            <path id="middle-line" d="M10,20 L50,20 Z"></path>
+            <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+          </g>
+        </svg>
       </div>
 
       <div className={classes.heroTitle}>
@@ -85,7 +73,7 @@ const HeroSlide: FC<IHeroSlide> = ({
         )}
       </div>
       {children}
-    </Slide>
+    </div>
   );
 };
 
