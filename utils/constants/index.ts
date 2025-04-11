@@ -1,21 +1,24 @@
 import { LayerProps } from "react-map-gl";
 import { Metadata } from "next";
 
+import alAinPhoto1 from "./public/al-ain/AlAin-1.webp";
+import alAinPhoto2 from "./public/al-ain/AlAin-2.webp";
+import alAinPhoto3 from "./public/al-ain/AlAin-3.webp";
 import alAinHero from "./public/al-ain-road-hero.jpg";
-import alAinPhoto1 from "./public/al-ain-road-photo-1.jpg";
-import alAinPhoto2 from "./public/al-ain-road-photo-2.jpg";
+import beirutPhoto1 from "./public/beirut/beirut-1.webp";
+import beirutPhoto2 from "./public/beirut/beirut-2.webp";
+import beirutPhoto3 from "./public/beirut/beirut-3.webp";
 import beirutHero from "./public/beirut-street-hero.jpg";
-import beirutPhoto1 from "./public/beirut-street-photo-1.jpg";
-import beirutPhoto2 from "./public/beirut-street-photo-2.jpg";
-import smbzArabianPhoto1 from "./public/SMBZ-arabian-photo-1.png";
-import smbzArabianPhoto2 from "./public/SMBZ-arabian-photo-2.png";
-import smbzMirdifPhoto1 from "./public/SMBZ-mirdif-photo-1.png";
-import smbzMirdifPhoto2 from "./public/SMBZ-mirdif-photo-2.png";
+import smbzArabianPhoto1 from "./public/smbz-arabian/ABR-1.webp";
+import smbzArabianPhoto2 from "./public/smbz-arabian/ABR-2.webp";
+import smbzMirdifPhoto1 from "./public/smbz-mirdif/MBZ-1.webp";
+import smbzMirdifPhoto2 from "./public/smbz-mirdif/MBZ-2.webp";
+import smbzMirdifPhoto3 from "./public/smbz-mirdif/MBZ-3.webp";
 import smbzHero from "./public/smbz-road-hero.jpg";
-import szrPalm2Photo1 from "./public/szr-palm-2-photo-1.png";
-import szrPalm2Photo2 from "./public/szr-palm-2-photo-2.png";
-import szrPalmPhoto1 from "./public/szr-palm-photo-1.png";
-import szrPalmPhoto2 from "./public/szr-palm-photo-2.png";
+import szrPalmPhoto1 from "./public/szr-palm-1/SZR-1.webp";
+import szrPalmPhoto2 from "./public/szr-palm-1/SZR-2.webp";
+import szrPalm2Photo1 from "./public/szr-palm-2/SZR-1.webp";
+import szrPalm2Photo2 from "./public/szr-palm-2/SZR-2.webp";
 
 export const INVENTORY: Record<
   string,
@@ -39,7 +42,7 @@ export const INVENTORY: Record<
       "Nad Al Sheba,",
       "Al Khor",
     ],
-    photos: [smbzMirdifPhoto1.src, smbzMirdifPhoto2.src],
+    photos: [smbzMirdifPhoto1.src, smbzMirdifPhoto2.src, smbzMirdifPhoto3.src],
     heroPhoto: smbzHero.src,
     coords: [55.3949963, 25.1897052],
   },
@@ -79,7 +82,7 @@ export const INVENTORY: Record<
       "Ras Al Khor,",
       "Dubai Racing Club",
     ],
-    photos: [alAinPhoto1.src, alAinPhoto2.src],
+    photos: [alAinPhoto1.src, alAinPhoto2.src, alAinPhoto3.src],
     heroPhoto: alAinHero.src,
     coords: [55.3291623, 25.1619682],
   },
@@ -144,7 +147,7 @@ export const INVENTORY: Record<
       "ADNOC,",
       "Emarat",
     ],
-    photos: [beirutPhoto1.src, beirutPhoto2.src],
+    photos: [beirutPhoto1.src, beirutPhoto2.src, beirutPhoto3.src],
     heroPhoto: beirutHero.src,
     coords: [55.396133, 25.2799125],
   },
