@@ -3,7 +3,7 @@
 import React from "react";
 
 import HeroSlide from "@/components/HeroSlide";
-import heroMain from "@/public/images/hero-main.jpg";
+import heroMain from "@/public/images/hero-main.png";
 
 const HomeHero = () => {
   const handleDownloadMediaKit = () => {

@@ -5,7 +5,7 @@ import HeroSlide from "@/components/HeroSlide";
 import MapContainer from "@/components/MapContainer";
 import Slide from "@/components/Slide";
 import UnitCard from "@/components/UnitCard";
-import heroLocations from "@/public/images/hero-locations.jpg";
+import heroLocations from "@/public/images/hero-locations.png";
 import { TGeoJson } from "@/shared/types";
 import { baseMetadata, INVENTORY } from "@/utils/constants";
 

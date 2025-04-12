@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import HeroSlide from "@/components/HeroSlide";
 import Slide from "@/components/Slide";
 import greyLogo from "@/public/grey-logo.svg";
-import heroClients from "@/public/images/hero-clients.jpg";
+import heroClients from "@/public/images/hero-clients.png";
 import global from "@/shared/theme/global.module.css";
 import { baseMetadata } from "@/utils/constants";
 
