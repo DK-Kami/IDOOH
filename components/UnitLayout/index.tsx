@@ -1,3 +1,5 @@
+"use client";
+
 import React, { FC } from "react";
 
 import HeroSlide from "@/components/HeroSlide";
@@ -28,6 +30,10 @@ const UnitLayout: FC<IUnitLayout> = ({ id }) => {
     { title: "landmarks", icon: searchIcon.src },
   ];
 
+  const handleDownloadMediaKit = () => {
+    window.open(unit?.mediaKitUrl as string, "_blank");
+  };
+
   if (!unit) return <></>;
 
   const markers = {
@@ -53,6 +59,8 @@ const UnitLayout: FC<IUnitLayout> = ({ id }) => {
           </>
         }
         url={unit.heroPhoto as string}
+        subHeader="DOWNLOAD MEDIAKIT"
+        onClickSubheader={handleDownloadMediaKit}
       />
       {/*<div*/}
       {/*  className={classes.unitPageHero}*/}
@@ -73,6 +81,19 @@ const UnitLayout: FC<IUnitLayout> = ({ id }) => {
       </div>
 
       <div className={classes.unitGallery}>
+        {(unit.videoUrls as string[])?.map((videoUrl) => (
+          <video
+            key={videoUrl}
+            className={classes.unitPhoto}
+            controls={false}
+            autoPlay
+            muted
+            loop
+          >
+            <source src={videoUrl} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ))}
         {(unit.photos as string[]).map((photo) => (
           <div
             className={classes.unitPhoto}

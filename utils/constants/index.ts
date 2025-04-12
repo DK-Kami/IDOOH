@@ -32,6 +32,7 @@ export const INVENTORY: Record<
     media: "Hoarding",
     traffic: 700000,
     size: "80x12 m / front lit",
+    mediaKitUrl: "/pdf/smbz-mirdif-mediakit.pdf",
     landmarks: [
       "Abu Dhabi,",
       "Al Maktoum Airport,",
@@ -42,6 +43,7 @@ export const INVENTORY: Record<
       "Nad Al Sheba,",
       "Al Khor",
     ],
+    videoUrls: ["/videos/MBZ-video-1.mp4"],
     photos: [smbzMirdifPhoto1.src, smbzMirdifPhoto2.src, smbzMirdifPhoto3.src],
     heroPhoto: smbzHero.src,
     coords: [55.3949963, 25.1897052],
@@ -54,6 +56,7 @@ export const INVENTORY: Record<
     media: "Hoarding",
     traffic: 700000,
     size: "50x12 m / front lit",
+    mediaKitUrl: "/pdf/smbz-arabian-mediakit.pdf",
     landmarks: [
       "Abu Dhabi,",
       "Al Maktoum Airport,",
@@ -76,6 +79,7 @@ export const INVENTORY: Record<
     media: "Hoarding",
     traffic: 600000,
     size: "50x12 m / front lit",
+    mediaKitUrl: "/pdf/al-ain-mediakit.pdf",
     landmarks: [
       "Nad Al Sheba 1,",
       "Nad Al Sheba 2,",
@@ -94,6 +98,7 @@ export const INVENTORY: Record<
     media: "Hoarding",
     traffic: 800000,
     size: "50x12 m / front lit",
+    mediaKitUrl: "/pdf/szr-palm-1-mediakit.pdf",
     landmarks: [
       "Abu Dhabi,",
       "Al Maktoum Airport,",
@@ -117,6 +122,7 @@ export const INVENTORY: Record<
     media: "Hoarding",
     traffic: 800000,
     size: "50x12 m / front lit",
+    mediaKitUrl: "/pdf/szr-palm-2-mediakit.pdf",
     landmarks: [
       "Abu Dhabi,",
       "Al Maktoum Airport,",
@@ -140,6 +146,7 @@ export const INVENTORY: Record<
     media: "Unipole",
     traffic: 350000,
     size: "12x6 m / 2 faces / back lit",
+    mediaKitUrl: "/pdf/beirut-mediakit.pdf",
     landmarks: [
       "Madina Mall,",
       "Aster Hospital,",
