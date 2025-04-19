@@ -86,6 +86,7 @@ const UnitLayout: FC<IUnitLayout> = ({ id }) => {
             key={videoUrl}
             className={classes.unitPhoto}
             controls={false}
+            playsInline
             autoPlay
             muted
             loop
