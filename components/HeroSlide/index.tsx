@@ -2,7 +2,7 @@
 
 import React, { FC, JSX, PropsWithChildren, useEffect } from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import Slide from "@/components/Slide";
 import logo from "@/public/logo.svg";
@@ -33,6 +33,7 @@ const HeroSlide: FC<IHeroSlide> = ({
   const [isMenuOpen, setMenuOpen] = React.useState(false);
 
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     setMenuOpen(false);
@@ -53,7 +54,12 @@ const HeroSlide: FC<IHeroSlide> = ({
         {isParallax || withoutActions ? (
           <div />
         ) : (
-          <Image src={logo} alt="" className={classes.heroLogo} />
+          <Image
+            src={logo}
+            alt=""
+            className={classes.heroLogo}
+            onClick={() => router.push("/")}
+          />
         )}
 
         {!isParallax && (
