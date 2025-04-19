@@ -36,6 +36,7 @@ const HeroSlide: FC<IHeroSlide> = ({
   const router = useRouter();
 
   const isIOS = useMemo(() => {
+    if (!window) return false;
     return /iPhone/.test(window?.navigator?.userAgent);
   }, []);
 
