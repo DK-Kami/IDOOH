@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, JSX, PropsWithChildren, useEffect } from "react";
+import React, { FC, JSX, PropsWithChildren, useEffect, useMemo } from "react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -35,9 +35,9 @@ const HeroSlide: FC<IHeroSlide> = ({
   const pathname = usePathname();
   const router = useRouter();
 
-  // const isIOS = useMemo(() => {
-  //   return /iPad|iPhone|iPod/.test(window.navigator.userAgent);
-  // }, []);
+  const isIOS = useMemo(() => {
+    return /iPhone/.test(window?.navigator?.userAgent);
+  }, []);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -47,7 +47,7 @@ const HeroSlide: FC<IHeroSlide> = ({
     <Slide
       style={{
         backgroundImage: `url(${url})`,
-        // backgroundAttachment: isParallax ? "fixed" : "unset",
+        backgroundAttachment: isParallax && !isIOS ? "fixed" : "unset",
       }}
       isSmall={isParallax}
       isRedSlide
