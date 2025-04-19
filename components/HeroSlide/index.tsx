@@ -36,7 +36,7 @@ const HeroSlide: FC<IHeroSlide> = ({
   const router = useRouter();
 
   const isIOS = useMemo(() => {
-    return /iPad|iPhone|iPod/.test(navigator.userAgent);
+    return /iPad|iPhone|iPod/.test(window.navigator.userAgent);
   }, []);
 
   useEffect(() => {
